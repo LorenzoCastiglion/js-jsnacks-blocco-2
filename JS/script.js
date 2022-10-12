@@ -142,9 +142,6 @@ let calcola = function(){
 
 }
 
-
-
-
 btn3.addEventListener('click', aggiungi);
 // btn3.addEventListener('click', calcola);
 
@@ -160,6 +157,35 @@ creare due array con diff numeri di elementi all'interno;
 
 fare check lunghezza di entrambi;
 
-creare condizione che push elementi nell'array con meno elementi fino a giungere a parità;
+creare condizione che pushi elementi nell'array con meno elementi fino a giungere a parità;
 
  */
+
+
+
+let a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+let b = [0, 1, 2, 3];
+
+let a1 = a.length;
+
+let b1 = b.length;
+
+if ( a1 > b1){
+
+   let n = a1 - b1
+
+    for(let i=0;i<=n;i++){
+       b.push(Math.floor(Math.random()*100)); 
+       console.log(b);
+    }
+}
+    else if (b1 > a1){
+        n = b1 - a1;
+        for(let i = 0 ; i<=n ;i++){
+            a.push(Math.floor(Math.random()*100));
+            console.log(a);
+            
+        }
+    }else{
+       
+    };
