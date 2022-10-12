@@ -9,41 +9,27 @@ se odd print odd +1;
 */
 
 
-//casella input numeri
-let snk1 = document.getElementById('snk1');
 
-//casella risultato
-let res1 = document.getElementById('check1');
 
 //bottone
 let btn1 = document.getElementById('btn1');
 
+// funzione che checki i numeri
 
-
-const stampa1 = function(){
-
-    res1.innerHTML = '';
-
-    let number1 = document.createElement('div');
-    // se numero pari
-    if(snk1.value % 2 == 0) {
-
-       number1.textContent = snk1.value ;
-    }
+const stampa1 = function () {
     
-    // se numero dispari
-    else {
-        console.log("The number is odd.");
-
-        number1.textContent = snk1.value ++;
+    let inputValue = document.getElementById('snk1').value;
+  
+    if (inputValue % 2 == 0) {
+        document.getElementById('check1').innerHTML = inputValue;
+    } else { // se dispari successivo
+        inputValue++;
+        document.getElementById('check1').innerHTML = inputValue;
     }
-    
-    res1.append(number1);
-   
-
+    document.getElementById('snk1').value = '';
 }
-
-btn1.addEventListener('click', stampa1);
+    // event listener per click bottone
+    btn1.addEventListener('click', stampa1);            
 
 
 
