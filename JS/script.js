@@ -45,6 +45,39 @@ creare una funzione che scelga elemento random nell'arary e lo pushi in una case
 */
 
 
+// bottonw
+let btn2 = document.getElementById('btn2');
+
+let nameList = ['Max', 'Jhonny', 'Tom', 'Philly', 'Marilyn', 'Judy', 'Enrietta', 'Franco'];
+let surnameList = ['Thompson', 'Porceddu', 'Rimmet', 'Popperpot', 'Jinglestring', 'Kimbles', 'Tunner', 'Bobtom'];
+
+let invitati = [];
+
+let genera = function(){
+
+    document.getElementById('check2').innerHTML = '';
+
+    for(i=0; i < 9; i++){
+       
+        let randomName = Math.floor(Math.random()* nameList.length);
+        let name = nameList[randomName];
+
+        let randomSurname = Math.floor(Math.random()* surnameList.length);
+        let surname = surnameList[randomSurname];
+
+        invitati.push(name + ' ' + surname);
+        let list = document.createElement('p')
+
+        document.getElementById('check2').append(list);
+        list.innerHTML = invitati[i];
+    }
+    
+    invitati = [];
+    
+}
+
+btn2.addEventListener('click', genera );      
+
 /*
 
 SNACK_3: Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
