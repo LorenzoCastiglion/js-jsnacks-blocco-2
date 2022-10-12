@@ -89,6 +89,40 @@ fare in modo che si selezionino solo i numeri ad index odd;
 sommare tali numeri tra di loro;
 
 */
+let btn3 = document.getElementById('btn3');
+
+let oddNumber = [];
+
+let aggiungi = function() {
+    // array feeder
+    const numeriDaGenerare = 20;
+
+    for (let i = 1; i <= numeriDaGenerare; i++) { 
+    let numeroGenerato = Math.floor(Math.random() * (2000 - 1));
+    console.log(numeroGenerato);
+    oddNumber.push(numeroGenerato);
+    }
+
+}
+let calcola = function(){
+   
+    let somma = 0;
+
+    for (let i = 0; i < oddNumber.length; i++){
+
+        if(i % 2 !==0){
+            somma = somma + oddNumber[i];
+        }
+    }
+}
+
+
+
+
+btn3.addEventListener('click', aggiungi, calcola )
+
+
+
 
 /**
  
