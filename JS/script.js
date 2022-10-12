@@ -93,33 +93,60 @@ let btn3 = document.getElementById('btn3');
 
 let oddNumber = [];
 
+
 let aggiungi = function() {
     // array feeder
-    const numeriDaGenerare = 20;
-
+    const numeriDaGenerare = 10;
+    
+    let serie = document.createElement('p');
+    document.getElementById('numbrs').innerHTML = '';
     for (let i = 1; i <= numeriDaGenerare; i++) { 
     let numeroGenerato = Math.floor(Math.random() * (2000 - 1));
     console.log(numeroGenerato);
     oddNumber.push(numeroGenerato);
+    
+    document.getElementById('numbrs').append(serie);
+    
+     serie.innerHTML = oddNumber;
+    
     }
 
+    calcola ();
+
+    oddNumber = []; 
 }
+
+
+
 let calcola = function(){
    
     let somma = 0;
 
-    for (let i = 0; i < oddNumber.length; i++){
+    let risultato = document.createElement('p');
 
-        if(i % 2 !==0){
-            somma = somma + oddNumber[i];
-        }
+    document.getElementById('check3').innerHTML = '';
+
+    for (let i = 0; i < oddNumber.length ; i++){
+
+    if(i % 2 != 0){
+
+        somma += oddNumber[i];
+        console.log(somma);
     }
+    document.getElementById('check3').append(risultato);
+
+    risultato.innerHTML = somma;
+
+    }
+
+
 }
 
 
 
 
-btn3.addEventListener('click', aggiungi, calcola )
+btn3.addEventListener('click', aggiungi);
+// btn3.addEventListener('click', calcola);
 
 
 
