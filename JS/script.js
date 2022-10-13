@@ -53,12 +53,37 @@ let surnameList = ['Thompson', 'Porceddu', 'Rimmet', 'Popperpot', 'Jinglestring'
 
 let invitati = [];
 
-let genera = function(){
+// let genera = function(){
 
-    document.getElementById('check2').innerHTML = '';
+//     document.getElementById('check2').innerHTML = '';
 
-    for(i=0; i < 9; i++){
+//     for(i=0; i < 9; i++){
        
+//         let randomName = Math.floor(Math.random()* nameList.length);
+//         let name = nameList[randomName];
+
+//         let randomSurname = Math.floor(Math.random()* surnameList.length);
+//         let surname = surnameList[randomSurname];
+
+//         invitati.push(name + ' ' + surname);
+//         let list = document.createElement('p')
+
+//         document.getElementById('check2').append(list);
+//         list.innerHTML = invitati[i];
+//     }
+    
+//     invitati = [];
+    
+// }
+
+
+let genera = function(){  
+    
+    let numeroNomi = 0;
+    document.getElementById('check2').innerHTML = '';
+   
+    while (numeroNomi < 50) {
+        
         let randomName = Math.floor(Math.random()* nameList.length);
         let name = nameList[randomName];
 
@@ -69,11 +94,11 @@ let genera = function(){
         let list = document.createElement('p')
 
         document.getElementById('check2').append(list);
-        list.innerHTML = invitati[i];
-    }
-    
-    invitati = [];
-    
+        list.innerHTML = invitati[numeroNomi];
+
+        numeroNomi++;
+}
+invitati = [];
 }
 
 btn2.addEventListener('click', genera );      
