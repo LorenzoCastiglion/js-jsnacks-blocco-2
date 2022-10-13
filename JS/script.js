@@ -170,6 +170,10 @@ let a1 = a.length;
 
 let b1 = b.length;
 
+
+
+
+// condizione riempimento array
 if ( a1 > b1){
 
    let n = a1 - b1
@@ -187,5 +191,5 @@ if ( a1 > b1){
             
         }
     }else{
-       
+       console.log('arrays are equal!');
     };
