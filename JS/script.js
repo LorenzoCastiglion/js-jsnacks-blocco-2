@@ -82,15 +82,20 @@ let genera = function(){
     let numeroNomi = 0;
     document.getElementById('check2').innerHTML = '';
    
-    while (numeroNomi < 50) {
+    while (numeroNomi < 9) {
         
         let randomName = Math.floor(Math.random()* nameList.length);
-        let name = nameList[randomName];
-
         let randomSurname = Math.floor(Math.random()* surnameList.length);
+       
+        let name = nameList[randomName];
         let surname = surnameList[randomSurname];
 
-        invitati.push(name + ' ' + surname);
+
+        if(!name.includes(randomName) && !surname.includes(randomSurname)){
+               invitati.push(name + ' ' + surname);
+        }
+     
+
         let list = document.createElement('p')
 
         document.getElementById('check2').append(list);
